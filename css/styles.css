@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Quicksand", sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: #f4f4f4; }
+a { text-decoration: none; }
+li { list-style: none; }
+
+.container { width: 90%; margin: 0 auto; }
+.container::after { content: ""; display: block; clear: both; }
+
+/* Header */
+header { height: 70px; background: #000; position: fixed; width: 100%; top: 0; z-index: 1000; }
+.header-left { float: left; padding: 22px 0; }
+.header-left h1 a { color: #fff; text-transform: uppercase; font-size: 20px; font-weight: bold; }
+.header-right { float: right; }
+.header-right ul li { display: inline-block; padding: 25px 15px; }
+.header-right ul li a { color: #fff; text-transform: uppercase; font-size: 14px; }
+
+/* Mobile Menu */
+#check { display: none; }
+.mobile-menu { float: right; color: #fff; padding: 18px; display: none; cursor: pointer; }
+.sidebar { position: fixed; top: 0; bottom: 0; left: -300px; width: 300px; background: rgba(0,0,0,0.95); transition: .3s; z-index: 2000; padding-top: 60px; }
+.sidebar ul li a { color: #fff; display: block; padding: 20px; text-align: center; text-transform: uppercase; }
+#check:checked ~ .sidebar { left: 0; }
+
+/* Banner */
+.banner { padding: 180px 0 100px 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521410409201-2fcbcc0379ee?auto=format&fit=crop&w=1351&q=80') no-repeat center; background-size: cover; color: #fff; text-align: center; }
+.banner h2 { font-size: 40px; margin-bottom: 10px; }
+
+/* Why Choose Us (Kotak Putih) */
+#features { padding: 40px 0; }
+.feature-card-wrapper { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+.feature-card-wrapper h3 { margin-bottom: 30px; color: #333; }
+.feature-content { display: flex; justify-content: space-around; flex-wrap: wrap; }
+.col-3-feature { width: 30%; padding: 10px; }
+.col-3-feature i { font-size: 35px; color: #f84744; margin-bottom: 10px; }
+.col-3-feature p { color: #777; font-size: 14px; }
+
+/* Products Grid */
+#product { padding: 60px 0; }
+.col-5 { width: 20%; float: left; padding: 10px; }
+.p-card { background: #fff; padding: 15px; text-align: center; border-radius: 10px; border: 1px solid #eee; transition: .3s; }
+.p-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+/* Menjaga Gambar Rapi */
+.p-card img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 15px; background: #f9f9f9; }
+
+.stok { font-size: 12px; color: #f84744; font-weight: bold; margin-bottom: 10px; }
+
+/* Size Style */
+.size-wrapper { margin-bottom: 15px; }
+.size-wrapper select { width: 100%; padding: 5px; border: 1px solid #ddd; border-radius: 4px; outline: none; }
+
+.btn-beli { background: #000; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold; }
+.btn-beli:hover { background: #f84744; }
+
+/* Checkout */
+#checkout-section { padding: 60px 0; }
+.checkout-wrapper { background: #fff; padding: 40px; border-radius: 15px; max-width: 700px; margin: 0 auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.total-section { border-top: 2px solid #333; margin-top: 20px; padding-top: 20px; text-align: right; }
+.btn-checkout { background: #27ae60; color: #fff; border: none; padding: 15px 30px; border-radius: 8px; cursor: pointer; width: 100%; font-size: 18px; font-weight: bold; }
+
+footer { background: #000; color: #fff; text-align: center; padding: 50px 0; }
+
+/* Responsive */
+@media (max-width: 1100px) { .col-5 { width: 33.3%; } }
+@media (max-width: 768px) { .col-5 { width: 50%; } .header-right { display: none; } .mobile-menu { display: block; } .col-3-feature { width: 100%; } }
+@media (max-width: 480px) { .col-5 { width: 100%; } }
